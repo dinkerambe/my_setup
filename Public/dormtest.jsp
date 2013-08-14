@@ -7,8 +7,10 @@
 </head>
 
 <body>
-<% 
-	String id = request.getParameter("id");
+<%! 
+
+	private String getLocation(String id){
+	String loc = null;
 	try{
 	String connectionURL = "jdbc:mysql://localhost:3306/mysetup_db";	
 	String connectionName = "root";
@@ -18,14 +20,14 @@
 	Statement stmt = connection.createStatement();
 	String query = "SELECT * FROM setup WHERE setup_id = 1";
 	ResultSet rs = stmt.executeQuery(query);
-	String loc = rs.getString("img_loc");
-	connection.close();
-	stmt.close();
-	rs.close();
-
-	}catch(Exception ex){}
+	if(rs.next()){
+		loc = "." + rs.getString("img_loc");
+	}
+	}catch(Exception ex){System.out.println(ex.getMessage());}
+	return loc;
+	}
 %>
-
+	
 	<div id="container">
 		<div id="header">
 			<img src="./images/Title.png" height="100" />
@@ -34,7 +36,7 @@
     	<div id="body">
         
 			<div class="left">
-				<p> <img src=${loc}  width="380" /></p>
+				<p> <img src=<%= getLocation(request.getParameter("id"))%> width="380" /></p>
 			</div>
     
 			<div class="right">
