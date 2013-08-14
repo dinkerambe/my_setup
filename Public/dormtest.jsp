@@ -21,7 +21,7 @@
 	String query = "SELECT * FROM setup WHERE setup_id = 1";
 	ResultSet rs = stmt.executeQuery(query);
 	if(rs.next()){
-		loc = "." + rs.getString("img_loc");
+		loc = "./" + rs.getString("img_loc");
 	}
 	}catch(Exception ex){System.out.println(ex.getMessage());}
 	return loc;
