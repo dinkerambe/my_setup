@@ -16,8 +16,8 @@
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection connection = DriverManager.getConnection(connectionURL, connectionName, connectionPassword);
 	Statement stmt = connection.createStatement();
-	String query = "SELECT * FROM setup WHERE setup_id = 1;"
-	rs = stmt.executeQuery(query);
+	String query = "SELECT * FROM setup WHERE setup_id = 1";
+	ResultSet rs = stmt.executeQuery(query);
 	String loc = rs.getString("img_loc");
 	connection.close();
 	stmt.close();
