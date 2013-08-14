@@ -18,7 +18,7 @@
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection connection = DriverManager.getConnection(connectionURL, connectionName, connectionPassword);
 	Statement stmt = connection.createStatement();
-	String query = "SELECT * FROM setup WHERE setup_id = 1";
+	String query = "SELECT * FROM setup WHERE setup_id = " + id;
 	ResultSet rs = stmt.executeQuery(query);
 	if(rs.next()){
 		loc = "./" + rs.getString("img_loc");
@@ -27,7 +27,6 @@
 	return loc;
 	}
 %>
-	
 	<div id="container">
 		<div id="header">
 			<img src="./images/Title.png" height="100" />
