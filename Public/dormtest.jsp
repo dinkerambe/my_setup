@@ -15,6 +15,13 @@
 	String connectionPassword = "dsa555";
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection connection = DriverManager.getConnection(connectionURL, connectionName, connectionPassword);
+	Statement stmt = connection.createStatement();
+	String query = "SELECT * FROM setup WHERE setup_id = 1;"
+	rs = stmt.executeQuery(query);
+	String loc = rs.getString("img_loc");
+	connection.close();
+	stmt.close();
+	rs.close();
 
 	}catch(Exception ex){}
 %>
@@ -27,7 +34,7 @@
     	<div id="body">
         
 			<div class="left">
-				<p> <img src=""  width="380" /></p>
+				<p> <img src=${loc}  width="380" /></p>
 			</div>
     
 			<div class="right">
