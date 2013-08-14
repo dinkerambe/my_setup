@@ -16,10 +16,6 @@ sources = $(wildcard *.java)
 	UserInfoBean.java \
 	UserInfoDAO.java \
 	ValuePairs.java \
-	PostBean.java \
-	PostDAO.java \
-	PostOwnerDAO.java \
-	PostVotesDAO.java \
 
 classes = $(sources:.java=.class)
 

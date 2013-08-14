@@ -1,7 +1,6 @@
 import java.text.*;
 import java.util.*;
 import java.sql.*;
-
 /*
 All methods are static and to be used as SQLCMD.method()
 

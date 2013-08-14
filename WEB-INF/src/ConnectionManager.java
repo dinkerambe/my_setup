@@ -8,7 +8,7 @@ public class ConnectionManager {
 
 	static Connection con;
 	static String url;
-	static String dataSource = "//localhost:3306/tomcat_realm";
+	static String dataSource = "//localhost:3306/mysetup_db";
 	static String connectionName = "root";
 	static String connectionPassword = "dsa555";
 

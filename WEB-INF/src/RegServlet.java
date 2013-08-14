@@ -18,16 +18,6 @@ public class RegServlet extends HttpServlet {
 		{	    
 
 			//Temp Testing for inits
-			UserDAO.initTable();
-			UserInfoDAO.initTable();
-			UserFriendDAO.initTable();
-			ContestDAO.initTable();
-			PostDAO.initTable();
-
-			PostOwnerDAO.initTable();
-			PostVotesDAO.initTable();
-
-
 
 			UserBean user = new UserBean();
 			user.setFirstName(request.getParameter("reg-name"));

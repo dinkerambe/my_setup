@@ -5,6 +5,7 @@ CREATE TABLE setup (
 	setup_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	img_loc varchar(255) NOT NULL UNIQUE
 	);
+INSERT INTO setup (img_loc) VALUES ('images/1.png');
 /*CREATE TABLE tomcat_users (
 	user_id int(64) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	email varchar(255) NOT NULL UNIQUE,
