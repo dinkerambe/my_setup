@@ -1,12 +1,11 @@
 <%@ page import="java.sql.*" %> 
-<%@ page import="java.io.*" %> 
-
+<%@ page import="java.io.*" %>
 <html>
 <head> 
 <link rel="stylesheet" type="text/css" href="./CSS/dormtheme.css">
 </head>
 <body>
-<%! 
+<%!
 	private String getLocation(String id){
 	String loc = null;
 	try{
@@ -31,10 +30,10 @@
 		</div>
 	<div id="body">
 		<div class="left">
-			<p> <img src=<%= getLocation(request.getParameter("id"))%> width="380" /></p>
+			<p> <img src=<%=getLocation(request.getParameter("id"))%> width="380" /></p>
 			</div>
 			<div class="right">
-				<p> Hello World </p>
+				<p>Hello World </p>
 			</div>
         </div>
         <div id="footer">
