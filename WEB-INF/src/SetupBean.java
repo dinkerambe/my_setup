@@ -1,6 +1,5 @@
 
 public class SetupBean{
-	
 	private long setupID;
 	private String setupID_str;
 	private String title;
