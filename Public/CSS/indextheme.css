@@ -1,0 +1,67 @@
+#header {
+	background: #33CC00;
+	width: 960px;
+	margin: 0px auto;
+}
+
+body {
+	margin:0;
+	height:100%;
+	background-image:url(../images/ios-linenbg.png);
+	background-repeat:repeat-y;
+    background-repeat:repeat-x;
+}
+
+
+#content{
+   background-color:#fff;
+   width:960px;
+   margin:0 auto;
+   
+}
+
+ul#list-nav {
+  list-style:none;
+  margin:0px;
+  padding:0;
+  width:960px
+  float:right;
+}
+
+ul#list-nav li {
+  display:inline
+}
+
+ul#list-nav li a {
+  text-decoration:none;
+  padding:0px 0;
+  width:240px;
+  background:#336633;
+  color:#eee;
+  float:left;
+  text-align:center;
+  border-left:0px
+}
+
+ul#list-nav li a:hover {
+  background:#33cc00;
+  color:#000
+}
+
+
+table.center {
+	padding-top:50px;
+	padding:10px;
+	margin-left:auto;
+	margin-right:auto;
+	background:#fff
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:50%;
+   height:-60px;   /* Height of the footer */
+   background:#33CC00;
+}
+

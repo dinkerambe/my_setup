@@ -1,13 +1,13 @@
 <html>
 <head> 
-<link rel="stylesheet" type="text/css" href="CSS/indextheme.css">
+<link rel="stylesheet" type="text/css" href="css/indextheme.css">
 </head>
 
 <body>
 	<div id="content">
 	
 	<div id="header">
-			<img src="images/Title.png" height="100" />
+			<img src="../../Images/Title.png" height="100" />
 	</div>
 	
 	<ul id="list-nav">
