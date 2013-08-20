@@ -1,11 +1,31 @@
 DROP DATABASE IF EXISTS mysetup_db;
 CREATE DATABASE mysetup_db;
 USE mysetup_db;
-CREATE TABLE setup (
+
+CREATE TABLE my_setup(
 	setup_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	title varchar(255) NOT NULL,
+	description varchar(255),
+	likes INT NOT NULL DEFAULT 0,
+	flags INT DEFAULT 0
+	);
+CREATE TABLE images(
+	setup_id BIGINT NOT NULL REFERENCES my_setup(setup_id),
 	img_loc varchar(255) NOT NULL UNIQUE
 	);
-INSERT INTO setup (img_loc) VALUES ('images/1.png');
+
+CREATE TABLE links(
+	setup_id BIGINT NOT NULL REFERENCES my_setup(setup_id),
+	url varchar(255) NOT NULL
+	);
+
+CREATE TABLE tags(
+	setup_id BIGINT NOT NULL REFERENCES my_setup(setup_id),
+	tag varchar(255) NOT NULL
+	);
+
+
+
 /*CREATE TABLE tomcat_users (
 	user_id int(64) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	email varchar(255) NOT NULL UNIQUE,
