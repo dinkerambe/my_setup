@@ -1,4 +1,4 @@
-
+import java.math.BigInteger;
 public class SetupBean{
 	private long setupID;
 	private String setupID_str;
@@ -23,11 +23,6 @@ public class SetupBean{
 		this.title = title;
 	}
 
-	public void setSetupID(long setupID){
-		this.userID = userID;
-		setUserID_str();
-	}
-	
 	//solution to long not being able to store 64bit unsigned ints
 	public void setSetupID_str(){
 		final BigInteger TWO_64 = BigInteger.ONE.shiftLeft(64);
