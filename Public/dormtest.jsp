@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %>
+<%@ page import="ConnectionManager.class*" %>
 <html>
 <head> 
 <link rel="stylesheet" type="text/css" href="./CSS/dormtheme.css">
