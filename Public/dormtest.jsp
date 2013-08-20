@@ -1,6 +1,6 @@
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %>
-<%@ page import="ConnectionManager.class*" %>
+<%@ page import="setup.Fake" %>
 <html>
 <head> 
 <link rel="stylesheet" type="text/css" href="./CSS/dormtheme.css">
@@ -24,6 +24,7 @@
 	}catch(Exception ex){System.out.println(ex.getMessage());}
 	return loc;
 	}
+	
 %>
 	<div id="container">
 		<div id="header">

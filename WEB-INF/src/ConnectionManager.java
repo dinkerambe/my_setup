@@ -1,9 +1,9 @@
+package mysetup;
 import java.sql.*;
 import java.util.*;
 //import java.net.URL;
 //import java.net.URLClassLoader;
 //import java.io.File;
-
 public class ConnectionManager {
 
 	static Connection con;
