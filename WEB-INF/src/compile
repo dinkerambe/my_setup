@@ -1,0 +1,1 @@
+javac -d ../classes/ -cp /usr/share/tomcat7/lib/mysql-connector-java-5.1.25-bin.jar:/usr/share/tomcat7/lib/servlet-api.jar *.java 

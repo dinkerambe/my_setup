@@ -1,3 +1,4 @@
+package setup;
 import java.math.BigInteger;
 public class SetupBean{
 	private long setupID;
