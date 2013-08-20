@@ -17,13 +17,13 @@ public class SetupDAO
    
    public static SetupBean registerSetup(SetupBean bean)
    {
-      String setupID = bean.getSetupID();
+      long setupID = bean.getSetupID();
       String title = bean.getTitle();
       String description = bean.getDescription();
-      String likes = bean.getLikes();
-      String flags = bean.getFlags();
+      int likes = bean.getLikes();
+      int flags = bean.getFlags();
       
-      List<String> field = new ArrayList<String>();
+      List<String> fields = new ArrayList<String>();
       List<String> values = new ArrayList<String>();
       
       fields.add(SETUP_ID_DB);
@@ -32,11 +32,11 @@ public class SetupDAO
       fields.add(LIKES_DB);
       fields.add(FLAGS_DB);
       
-      values.add(setupID);
+      values.add("" + setupID);
       values.add(title);
       values.add(description);
-      values.add(likes);
-      values.add(flags);
+      values.add("" + likes);
+      values.add("" + flags);
       
       try{
 			SQLCMD.initConnection();	
@@ -54,9 +54,8 @@ public class SetupDAO
 	   SetupBean result = null;
 	   try{
 	      SQLCMD.initConnection();
-	      rs = SQLCMD.select(SETUP_TABLE, SETUP_ID_DB, setupID);
+	      rs = SQLCMD.select(SETUP_TABLE, SETUP_ID_DB,"" + setupID);
 	      
-	      long setupID = rs.getLong(SETUP_ID_DB);
 	      String title = rs.getString(TITLE_DB);
 	      String description = rs.getString(DESCRIPTION_DB);
 	      int likes = rs.getInt(LIKES_DB);
