@@ -64,7 +64,7 @@ public class UserDAO
 			String lastName = rs.getString(L_NAME_DB);
 			String email = rs.getString(EMAIL_DB);
 			String password = rs.getString(PASS_DB);
-			long user_id = rs.getLong(UID_DB);
+			long user_id = rs.getInt(UID_DB);
 			
 			result = new UserBean(user_id, email, firstName, lastName, password);
 
