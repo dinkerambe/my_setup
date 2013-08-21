@@ -18,24 +18,23 @@
 		</div>
 		
 		<div id="pagecenter">
-
-			<h1> Top Rated: </h1>
+			<h1>  &nbsp; <font color="#336633"> Top Rated: </font> </h1>
 			<br>
-				<TABLE class = "center" BORDER = "0">
+				<TABLE class = "center" BORDER = "0" cellpadding="10">
 				<TR>
-				<TD> <img src="box.png" width="240" </TD>
-				<TD>  <img src="box.png" width="240" </TD>
-				<TD>  <img src="box.png" width="240" </TD>
+				<TD> <img src="./images/box1.jpg" width="240" </TD>
+				<TD> <img src="./images/box2.jpg" width="240" </TD>
+				<TD> <img src="./images/box3.jpg" width="240" </TD>
 				</TR>
 				<TR>
-				<TD>  <img src="box.png" width="240" </TD>
-				<TD>  <img src="box.png" width="240" </TD>
-				<TD>  <img src="box.png" width="240" </TD>
+				<TD>  <img src="./images/box4.jpg" width="240" </TD>
+				<TD>  <img src="./images/box5.jpg" width="240" </TD>
+				<TD>  <img src="./images/box6.jpg" width="240" </TD>
 				</TR>
 				<TR>
-				<TD>  <img src="box.png" width="240" </TD>
-				<TD>  <img src="box.png" width="240" </TD>
-				<TD>  <img src="box.png" width="240" </TD>
+				<TD>  <img src="./images/box7.jpg" width="240" </TD>
+				<TD>  <img src="./images/box8.jpg" width="240" </TD>
+				<TD>  <img src="./images/box9.jpg" width="240" </TD>
 				</TR>
 				</TABLE>
 			

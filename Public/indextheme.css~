@@ -7,7 +7,6 @@ body, html {
    background-repeat:repeat-y;
    background-repeat:repeat-x;
 }
-
 #header {
 	background: #33CC00;
 	width: 960px;
