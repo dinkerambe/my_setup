@@ -28,7 +28,7 @@
 	}
 
 	private String getDescription(long id){
-		SetupBean temp = UserDAO.grabSetup(id);
+		SetupBean temp = SetupDAO.grabSetup(id);
 		String result = temp.getDescription();
 		return result;
 	}
