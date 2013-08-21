@@ -2,6 +2,7 @@ package setup;
 import java.text.*;
 import java.util.*;
 import java.sql.*;
+import java.lang.Long;
 
 public class SetupDAO
 {
@@ -84,7 +85,7 @@ public class SetupDAO
 	      int likes = rs.getInt(LIKES_DB);
 	      int flags = rs.getInt(FLAGS_DB);
 	      
-	      result = new SetupBean(setupID, title, description, likes, flags);
+	      result = new SetupBean(Long.valueOf(setupID).longValue(), title, description, likes, flags);
 	      
 	      }catch(Exception e) {System.out.println("SETUPDAO: Grab Failed");}
 	      finally{
