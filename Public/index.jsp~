@@ -55,7 +55,9 @@
 				   <TD>  <img src="./images/box8.jpg" width="240" </TD>
 				   <TD>  <img src="./images/box9.jpg" width="240" </TD>
 				</TR>
-				</TABLE>				
+				</TABLE>		
+				
+				<br>		
 		   </div>
 		   <div id="footer"></div>
 	   </div>

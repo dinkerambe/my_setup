@@ -57,6 +57,24 @@
 				</TR>
 				</TABLE>		
 				
+				<TABLE class = "center" BORDER = "0" cellpadding="15">
+				<TR>
+				   <TD> <img src="./images/box1.jpg" width="240" </TD>
+				   <TD> <img src="./images/box2.jpg" width="240" </TD>
+				   <TD> <img src="./images/box3.jpg" width="240" </TD>
+				</TR>
+				<TR>
+				   <TD>  <img src="./images/box4.jpg" width="240" </TD>
+				   <TD>  <img src="./images/box5.jpg" width="240" </TD>
+				   <TD>  <img src="./images/box6.jpg" width="240" </TD>
+				</TR>
+				<TR>
+				   <TD>  <img src="./images/box7.jpg" width="240" </TD>
+				   <TD>  <img src="./images/box8.jpg" width="240" </TD>
+				   <TD>  <img src="./images/box9.jpg" width="240" </TD>
+				</TR>
+				</TABLE>		
+				
 				<br>		
 		   </div>
 		   <div id="footer"></div>
