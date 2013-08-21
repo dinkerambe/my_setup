@@ -27,7 +27,7 @@
 	return loc;
 	}
 
-	private String getDescription(long id){
+	private String getDescription(String id){
 		SetupBean temp = SetupDAO.grabSetup(id);
 		String result = temp.getDescription();
 		return result;
