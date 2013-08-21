@@ -30,7 +30,6 @@ body {
 }
 
 ul#list-nav {
-  postion: fixed;
   list-style:none;
   margin:0px;
   padding:20px;

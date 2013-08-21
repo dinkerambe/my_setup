@@ -1,6 +1,7 @@
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %>
-<%@ page import="setup.ConnectionManager" %>
+<%@ page import="setup.SetupBean" %>
+<%@ page import="setup.SetupDAO" %>
 
 <html>
 <head>
@@ -25,26 +26,24 @@
 	}catch(Exception ex){System.out.println(ex.getMessage());}
 	return loc;
 	}
+
+	private String getDescription(String id){
+		SetupBean temp = SetupDAO.grabSetup(id);
+		String result = temp.getDescription();
+		return result;
+	}
 %>
 	<div id="wrapper">
 		<div id="header" align="center">
 		<a href="index.jsp">
 	      <img src="./images/Title.png" height="100"/>
 	   </a>
-		<ul id="list-nav">
-			<li> <a href="#TopRated"> <h2> Top Rated </h2> </a> </li>
-			<li> <a href="#MostPopular"> <h2> Most Popular </h2> </a> </li>
-			<li> <a href="#Categories"> <h2> Categories </h2> </a> </li>
-			<li> <a href="#Random"> <h2> Random </h2> </a> </li>
-		</ul>
-		
 		
 		</div>
 		<div id="content" align="center">
 		
 		<div class="left">
-		<p> <img class="TextWrap" width="500" src=<%=getLocation(request.getParameter("id"))%> /> Hello World Hello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello World </p>
-		
+		<p> <img class="TextWrap" width="500" src=<%=getLocation(request.getParameter("id"))%> /> <%out.print(getDescription(request.getParameter("id")));%></p>		
 		<p> AMAZON AMAZON AMAZON AMAZON AMAZON AMAZON </p>
 		</div>
 		

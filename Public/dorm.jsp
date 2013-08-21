@@ -38,13 +38,6 @@
 		<a href="index.jsp">
 	      <img src="./images/Title.png" height="100"/>
 	   </a>
-		<ul id="list-nav">
-			<li> <a href="#TopRated"> <h2> Top Rated </h2> </a> </li>
-			<li> <a href="#MostPopular"> <h2> Most Popular </h2> </a> </li>
-			<li> <a href="#Categories"> <h2> Categories </h2> </a> </li>
-			<li> <a href="#Random"> <h2> Random </h2> </a> </li>
-		</ul>
-		
 		
 		</div>
 		<div id="content" align="center">
