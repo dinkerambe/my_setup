@@ -1,23 +1,32 @@
+
+body, html {
+   height:100%;
+   padding:0;
+   margin:0;
+   background-image:url(../images/ios-linenbg.png);
+   background-repeat:repeat-y;
+   background-repeat:repeat-x;
+}
+
 #header {
 	background: #33CC00;
 	width: 960px;
 	margin: 0px auto;
 }
 
-body {
-	margin:0;
-	height:100%;
-	background-image:url(../Images/ios-linenbg.png);
-	background-repeat:repeat-y;
-    background-repeat:repeat-x;
-}
-
-
 #content{
    background-color:#fff;
    width:960px;
    margin:0 auto;
-   
+   padding:0 auto;
+   overflow:hidden!important;}
+}
+
+#pagecenter{
+	position:absolute;
+	top:168px;
+	width:960px;
+	background-color:#fff;
 }
 
 ul#list-nav {
@@ -50,7 +59,6 @@ ul#list-nav li a:hover {
 
 
 table.center {
-	padding-top:50px;
 	padding:10px;
 	margin-left:auto;
 	margin-right:auto;
@@ -60,8 +68,9 @@ table.center {
 #footer {
    position:absolute;
    bottom:0;
-   width:50%;
-   height:-60px;   /* Height of the footer */
+   width:960px;
+   height:50px;   /* Height of the footer */
    background:#33CC00;
 }
+
 
