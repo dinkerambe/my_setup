@@ -50,7 +50,7 @@
 		<div id="content" align="center">
 		
 		<div class="left">
-		<p> <img class="TextWrap" width="500" src=<%=getLocation(request.getParameter("id"))%> /> <%out.print(getDescription(request.getParameter("id"))%></p>		
+		<p> <img class="TextWrap" width="500" src=<%=getLocation(request.getParameter("id"))%> /> <%out.print(getDescription(request.getParameter("id")));%></p>		
 		<p> AMAZON AMAZON AMAZON AMAZON AMAZON AMAZON </p>
 		</div>
 		

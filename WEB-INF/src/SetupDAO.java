@@ -80,14 +80,16 @@ public class SetupDAO
 	      SQLCMD.initConnection();
 	      rs = SQLCMD.select(SETUP_TABLE, SETUP_ID_DB, setupID);
 	      
+	      if(rs.next()){
+	      long id = rs.getLong(SETUP_ID_DB);
 	      String title = rs.getString(TITLE_DB);
 	      String description = rs.getString(DESCRIPTION_DB);
 	      int likes = rs.getInt(LIKES_DB);
 	      int flags = rs.getInt(FLAGS_DB);
+	      result = new SetupBean(id, title, description, likes, flags);
+	      } 
 	      
-	      result = new SetupBean(Long.valueOf(setupID).longValue(), title, description, likes, flags);
-	      
-	      }catch(Exception e) {System.out.println("SETUPDAO: Grab Failed");}
+	      }catch(Exception e) {System.out.println("SETUPDAO: Grab Failed: " + e.getMessage());}
 	      finally{
 	         SQLCMD.closeConnection();
 	      }
