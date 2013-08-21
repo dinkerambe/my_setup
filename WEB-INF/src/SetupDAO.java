@@ -72,6 +72,28 @@ public class SetupDAO
 	      return result;
 	      
 	 }
+	public static SetupBean grabSetup(String setupID)
+	{
+	   SetupBean result = null;
+	   try{
+	      SQLCMD.initConnection();
+	      rs = SQLCMD.select(SETUP_TABLE, SETUP_ID_DB, setupID);
+	      
+	      String title = rs.getString(TITLE_DB);
+	      String description = rs.getString(DESCRIPTION_DB);
+	      int likes = rs.getInt(LIKES_DB);
+	      int flags = rs.getInt(FLAGS_DB);
+	      
+	      result = new SetupBean(setupID, title, description, likes, flags);
+	      
+	      }catch(Exception e) {System.out.println("SETUPDAO: Grab Failed");}
+	      finally{
+	         SQLCMD.closeConnection();
+	      }
+	      
+	      return result;
+	      
+	 }
 	 
 	 public static void initTable(){
 	   try{
