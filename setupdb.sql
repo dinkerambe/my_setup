@@ -24,7 +24,7 @@ CREATE TABLE tags(
 	tag varchar(255) NOT NULL
 	);
 
-INSERT INTO my_setup (title, description, likes, flags) VALUES ('test, 'test', '10', '0'); 
+INSERT INTO my_setup (title, description, likes, flags) VALUES ('test', 'test', '10', '0'); 
 
 /*CREATE TABLE tomcat_users (
 	user_id int(64) NOT NULL AUTO_INCREMENT PRIMARY KEY,
