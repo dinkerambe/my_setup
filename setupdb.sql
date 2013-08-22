@@ -27,6 +27,7 @@ CREATE TABLE tags(
 INSERT INTO my_setup (title, description, likes, flags) VALUES ('test', 'test', '10', '0'); 
 
 INSERT INTO images (setup_id, img_loc) VALUES ('1', 'images/1.png');
+INSERT INTO links (setup_id, url) VALUES ('1', 'http://www.amazon.com/test');
 /*CREATE TABLE tomcat_users (
 	user_id int(64) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	email varchar(255) NOT NULL UNIQUE,

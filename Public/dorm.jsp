@@ -17,9 +17,10 @@
 	}
 	
 %>
-<% String idt = request.getParameter("id"); %>
-<% SetupBean bean = SetupDAO.grabSetup(idt); %>
-<% ArrayList<String> imgList= SetupDAO.grabImages(idt);%>
+<% String id = request.getParameter("id"); %>
+<% SetupBean bean = SetupDAO.grabSetup(id); %>
+<% ArrayList<String> imgList= SetupDAO.grabImages(id);%>
+<% ArrayList<String> linkList = SetupDAO.grabLinks(id);%>
 	<div id="wrapper">
 		<div id="header" align="center">
 		<a href="index.jsp">
@@ -31,7 +32,7 @@
 		
 		<div class="left">
 		<p> <img class="TextWrap" width="500" src=<%="./" + imgList.get(0)%> /> <%out.print(bean.getDescription()/*getDescription(request.getParameter("id"))*/);%></p>		
-		<p> AMAZON AMAZON AMAZON AMAZON AMAZON AMAZON </p>
+		<p>Links:<%out.print(" " + linkList.get(0));%></p>
 		</div>
 		
 		</div>
