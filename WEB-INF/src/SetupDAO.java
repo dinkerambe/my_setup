@@ -6,50 +6,55 @@ import java.lang.Long;
 
 public class SetupDAO
 {
-   static Connection currentCon = null;
-   static ResultSet rs = null;
+	static Connection currentCon = null;
+	static ResultSet rs = null;
+	
+	final static String SETUP_TABLE = "my_setup";
+	final static String SETUP_ID_DB = "setup_id";
+	final static String TITLE_DB = "title";
+	final static String DESCRIPTION_DB = "description";
+	final static String LIKES_DB = "likes";
+	final static String FLAGS_DB = "flags";
+	
+	final static String IMG_TABLE = "images";
+	final static String IMG_LOC_DB = "img_loc";
    
-   final static String SETUP_TABLE = "my_setup";
-   final static String SETUP_ID_DB = "setup_id";
-   final static String TITLE_DB = "title";
-   final static String DESCRIPTION_DB = "description";
-   final static String LIKES_DB = "likes";
-   final static String FLAGS_DB = "flags";
-   
-   
-   public static SetupBean registerSetup(SetupBean bean)
-   {
-      long setupID = bean.getSetupID();
-      String title = bean.getTitle();
-      String description = bean.getDescription();
-      int likes = bean.getLikes();
-      int flags = bean.getFlags();
-      
-      List<String> fields = new ArrayList<String>();
-      List<String> values = new ArrayList<String>();
-      
-      fields.add(SETUP_ID_DB);
-      fields.add(TITLE_DB);
-      fields.add(DESCRIPTION_DB);
-      fields.add(LIKES_DB);
-      fields.add(FLAGS_DB);
-      
-      values.add("" + setupID);
-      values.add(title);
-      values.add(description);
-      values.add("" + likes);
-      values.add("" + flags);
-      
-      try{
-			SQLCMD.initConnection();	
-			SQLCMD.insertField(SETUP_TABLE, fields, values);	
-		}catch(Exception e){}
-		finally{
-			SQLCMD.closeConnection();
+   	final static String LINK_TABLE = "links";
+	final static String URL_DB = "url";
+
+	public static SetupBean registerSetup(SetupBean bean)
+	{
+		long setupID = bean.getSetupID();
+		String title = bean.getTitle();
+		String description = bean.getDescription();
+		int likes = bean.getLikes();
+		int flags = bean.getFlags();
+
+		List<String> fields = new ArrayList<String>();
+		List<String> values = new ArrayList<String>();
+
+		fields.add(SETUP_ID_DB);
+		fields.add(TITLE_DB);
+		fields.add(DESCRIPTION_DB);
+		fields.add(LIKES_DB);
+		fields.add(FLAGS_DB);
+
+		values.add("" + setupID);
+		values.add(title);
+		values.add(description);
+		values.add("" + likes);
+		values.add("" + flags);
+
+		try{
+				SQLCMD.initConnection();	
+				SQLCMD.insertField(SETUP_TABLE, fields, values);	
+			}catch(Exception e){}
+			finally{
+				SQLCMD.closeConnection();
+			}
+			return bean;
+			
 		}
-		return bean;
-		
-	}
 	
 	public static SetupBean grabSetup(long setupID)
 	{
@@ -97,6 +102,38 @@ public class SetupDAO
 	      
 	      return result;
 	      
+	 }
+
+	public static ArrayList<String> grabImages(String setupID){
+		ArrayList<String> result = new ArrayList<String>();
+		try{
+			SQLCMD.initConnection();
+			rs = SQLCMD.select(IMG_TABLE, SETUP_ID_DB, setupID);
+
+			while(rs.next()){
+				result.add(rs.getString(IMG_LOC_DB));
+			}
+		}catch(Exception e){System.out.println("SETUPDAO: GRAB IMG FAILED: " + e.getMessage());}
+		finally{
+			SQLCMD.closeConnection();
+		}
+		return result;
+	}
+
+	public static ArrayList<String> grabLinks(String setupID){
+		ArrayList<String> result = new ArrayList<String>();
+		try{
+			SQLCMD.initConnection();
+			rs = SQLCMD.select(LINK_TABLE, SETUP_ID_DB, setupID);
+
+			while(rs.next()){
+				result.add(rs.getString(URL_DB));
+			}
+		}catch(Exception e){System.out.println("SETUPDAO: GRAB LINK FAILED: " + e.getMessage());}
+		finally{
+			SQLCMD.closeConnection();
+		}
+		return result;
 	 }
 	 
 	 public static void initTable(){
