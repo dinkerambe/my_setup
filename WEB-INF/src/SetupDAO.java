@@ -19,6 +19,9 @@ public class SetupDAO
 	final static String IMG_TABLE = "images";
 	final static String IMG_LOC_DB = "img_loc";
    
+   	final static String LINK_TABLE = "links";
+	final static String URL_DB = "url";
+
 	public static SetupBean registerSetup(SetupBean bean)
 	{
 		long setupID = bean.getSetupID();
@@ -101,7 +104,7 @@ public class SetupDAO
 	      
 	 }
 
-	 public static ArrayList<String> grabImages(String setupID){
+	public static ArrayList<String> grabImages(String setupID){
 		ArrayList<String> result = new ArrayList<String>();
 		try{
 			SQLCMD.initConnection();
@@ -111,6 +114,22 @@ public class SetupDAO
 				result.add(rs.getString(IMG_LOC_DB));
 			}
 		}catch(Exception e){System.out.println("SETUPDAO: GRAB IMG FAILED: " + e.getMessage());}
+		finally{
+			SQLCMD.closeConnection();
+		}
+		return result;
+	}
+
+	public static ArrayList<String> grabLinks(String setupID){
+		ArrayList<String> result = new ArrayList<String>();
+		try{
+			SQLCMD.initConnection();
+			rs = SQLCMD.select(LINK_TABLE, SETUP_ID_DB, setupID);
+
+			while(rs.next()){
+				result.add(rs.getString(URL_DB));
+			}
+		}catch(Exception e){System.out.println("SETUPDAO: GRAB LINK FAILED: " + e.getMessage());}
 		finally{
 			SQLCMD.closeConnection();
 		}
