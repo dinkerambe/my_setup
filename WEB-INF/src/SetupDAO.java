@@ -102,13 +102,13 @@ public class SetupDAO
 	 }
 
 	 public static ArrayList<String> grabImages(String setupID){
-		ArrayList<String> result = new ArrayList<String>
+		ArrayList<String> result = new ArrayList<String>();
 		try{
 			SQLCMD.initConnection();
 			rs = SQLCMD.select(IMG_TABLE, SETUP_ID_DB, setupID);
 
 			while(rs.next()){
-				result.add(rs.getString(IMG_LOC_DB);
+				result.add(rs.getString(IMG_LOC_DB));
 			}
 		}catch(Exception e){System.out.println("SETUPDAO: GRAB IMG FAILED: " + e.getMessage());}
 		finally{
