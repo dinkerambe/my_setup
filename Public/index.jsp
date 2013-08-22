@@ -9,12 +9,31 @@
 	      	<a href="index.jsp">
 	      	   <img src="./images/Title.png" height="100"/>
 	      	</a>
-	      	<ul id="list-nav">
-	      		<li> <a href="#TopRated"> <h2> Top Rated </h2> </a> </li>
-	      		<li> <a href="#MostPopular"> <h2> Most Popular </h2> </a> </li>
-	      		<li> <a href="#Categories"> <h2> Categories </h2> </a> </li>
-	      		<li> <a href="#Random"> <h2> Random </h2> </a> </li>
-	      	</ul>
+	      	<br><br>
+      <div id='cssmenu'>
+      <ul>
+         <li class='active'><a href='index.jsp'><span>Home</span></a></li>
+         <li class='has-sub'><a href='#'><span>Top Dorms</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Item</span></a></li>
+               <li class='last'><a href='#'><span>Sub Item</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Item</span></a></li>
+               <li class='last'><a href='#'><span>Sub Item</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>Random</span></a></li>
+   <li class='last'><a href='#'><span>Most Liked</span></a></li>
+</ul>
+</div>
+
 		   </div>
 		   
 		   <div id="content" align="center">
