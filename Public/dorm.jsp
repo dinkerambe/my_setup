@@ -25,20 +25,18 @@
 	   	<div id="header" align="center">
 	      	<a href="index.jsp">
 	            <img src="./images/Title.png" height="100"/>
-	         </a>
-	   
-	         <br> <br>
+            </a>
 	      	<div id='cssmenu'>
                <ul>
                   <li class='active'><a href='index.jsp'><span>Home</span></a></li>
                   <li class='active'><a href='#'><span>Top Dorms</span></a>
-                  <li><a href='#'><span>Random</span></a></li>
+                  <li><a href='#'><span>Upload</span></a></li>
                   <li class='last'><a href='#'><span>Most Liked</span></a></li>
                </ul>
             </div>
 		   </div>
 		   <div id="content" align="center">
-		      <TABLE BORDER = '0'>
+		      <TABLE BORDER = '0' CELLPADDING= '20'>
 		         <TR> 
 		            <TD>
 		               <img width="400" src=<%="./" + imgList.get(0)%> /> 

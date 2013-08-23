@@ -9,12 +9,11 @@
 	      	<a href="index.jsp">
 	      	   <img src="./images/Title.png" height="100"/>
 	      	</a>
-	      	<br> <br>
 		<div id='cssmenu'>
       <ul>
          <li class='active'><a href='index.jsp'><span>Home</span></a></li>
          <li class='active'><a href='#'><span>Top Dorms</span></a>
-         <li><a href='#'><span>Random</span></a></li>
+         <li><a href='#'><span>Upload</span></a></li>
          <li class='last'><a href='#'><span>Most Liked</span></a></li>
       </ul>
       </div>
