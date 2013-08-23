@@ -30,6 +30,18 @@ body {
 }
 
 
+.left {
+	float: center;
+	width: 50%;
+}
+
+.TextWrap {
+   float:left;
+   margin: 30px;
+}
+
+
+/* ALL CSS FOR THE NAVIGATION BAR */
 #cssmenu ul {
   margin: 0;
   padding: 0;
@@ -161,12 +173,3 @@ body {
   color: #f0f0f0;
 }
 
-.left {
-	float: center;
-	width: 50%;
-}
-
-.TextWrap {
-   float:left;
-   margin: 30px;
-}
