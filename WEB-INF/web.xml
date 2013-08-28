@@ -33,5 +33,15 @@
 		<servlet-name>RegServlet</servlet-name>
 		<url-pattern>/Login/RegServlet </url-pattern>
 	</servlet-mapping>
+
+
+	<context-param> 
+	    <description>Location to store uploaded file</description> 
+	    <param-name>file-upload</param-name> 
+	    <param-value>
+		/usr/share/tomcat7/webapps/my_setup/Public/images/uploads/ 
+	     </param-value> 
+	</context-param>
+
 </web-app>
 
