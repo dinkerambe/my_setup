@@ -10,13 +10,13 @@
 	      	   <img src="./images/Title.png" height="100"/>
 	      	</a>
 		<div id='cssmenu'>
-      <ul>
-         <li class='active'><a href='index.jsp'><span>Home</span></a></li>
-         <li class='active'><a href='#'><span>Top Dorms</span></a>
-         <li><a href='upload.jsp'><span>Upload</span></a></li>
-         <li class='last'><a href='#'><span>Most Liked</span></a></li>
-      </ul>
-      </div>
+               <ul>
+                  <li class='active'><a href='index.jsp'><span>Home</span></a></li>
+                  <li class='active'><a href='#'><span>Top Dorms</span></a>
+                  <li><a href='upload.jsp'><span>Upload</span></a></li>
+                  <li class='last'><a href='#'><span>Most Liked</span></a></li>
+               </ul>
+            </div>
 
 		   </div>
 		   
